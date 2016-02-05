@@ -3,5 +3,6 @@ description = Starter theme designed for giving the developer more flexibility
 version = 1.0
 core = 6.x
 engine = phptemplate
-stylesheets[all][] = style.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/theme.css
 scripts[] = js/bootstrap.min.js
