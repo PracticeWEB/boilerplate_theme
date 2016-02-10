@@ -68,8 +68,8 @@ Then apply boostrap classes such col-xs-12 (see [getbootstrap.com][bootstrap css
 You could also use live browser editors such [bootstrap-live-customizer.com][bootstrap live customizer]. This tool allows you to edit variables, as well as download complete customised variables.less, theme.less and bootstrap.css.
 
 ##Useful Information
-* [Drupal 6 Global variables]: [drupal 6 Global variables]
-* [Drupal 6 Function reference]: [drupal 6 Function reference]
+* [Drupal 6 Global variables]
+* [Drupal 6 Function reference]
 
 ##Troubleshooting
 If you get into a mess, you can remove all the css files from the css folder.
