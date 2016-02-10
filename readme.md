@@ -55,12 +55,21 @@ It is designed to be minimal so that it gives the developer more freedom to choo
 
 It also has the Bootstrap parent themes' template files for common Landscape Content types.
 
+###Regions
+If no regions are defined, the theme defaults to left sidebar, right sidebar, content, header and footer. Custom regions will override the defaults.
+
+See [default .info values][default .info values] for more information.
+
 ##For responsive migrations
 One strategy would be to use the same regions that was used in the previous theme and assign the same blocks to those regions.
 
 Then apply boostrap classes such col-xs-12 (see [getbootstrap.com][bootstrap css home page]) to page.tpl and any necessary Drupal blocks.
 
 You could also use live browser editors such [bootstrap-live-customizer.com][bootstrap live customizer]. This tool allows you to edit variables, as well as download complete customised variables.less, theme.less and bootstrap.css.
+
+##Useful Information
+* [Drupal 6 Global variables]: [drupal 6 Global variables]
+* [Drupal 6 Function reference]: [drupal 6 Function reference]
 
 ##Troubleshooting
 If you get into a mess, you can remove all the css files from the css folder.
@@ -78,3 +87,6 @@ It is also helpful to remove the Auto compile option from your LESS GUI applicat
 [less comprehensive listing]: http://www.cssauthor.com/less-tutorials/
 [bootstrap css home page]: http://www.getbootstrap.com
 [bootstrap live customizer]: http://www.bootstrap-live-customizer.com
+[drupal 6 Global variables]: https://api.drupal.org/api/drupal/globals/6
+[drupal 6 Function reference]: https://api.drupal.org/api/drupal/functions/6
+[default .info values]: https://www.drupal.org/node/171206
