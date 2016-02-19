@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this theme will be documented in this file.
 
+
+## [1.2] - 2016-02-19
+### Added
+* Added variables (from /admin/settings/site-information) to template.php.
+
 ## [1.2] - 2016-02-17
 ### Added
 * Added change log file.
