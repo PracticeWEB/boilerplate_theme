@@ -41,7 +41,8 @@ if ($page) {
   print "<div class='row'>";
 
     if ($image_field) {
-      print '<div class="col-xs-4 col-sm-3"><img src="/' . $image_field . '" title="' . $title . '" class="img-thumbnail" alt="' . $staff_alt_text .'"></div>';
+      print $image_field;
+      //print '<div class="col-xs-4 col-sm-3"><img src="/' . $image_field . '" title="' . $title . '" class="img-thumbnail" alt="' . $staff_alt_text .'"></div>';
     }
 
   print '<div class="col-xs-8 col-sm-9">';    
@@ -73,45 +74,26 @@ if ($page) {
   }
 
 } else {
-  
-  // teaser profile listing
-  if ($layout_staff_directory_layout == 'rows') {
-    print "<div class='profile clearfix'>";
-    if ($image_field) {
-        print '<div class="col-xs-4 col-sm-3"><a href="' . $node_url . '"><img src="/' . $image_field . '" title="' . $title . '" class="img-thumbnail" alt="' . $staff_alt_text .'"></a></div>';
-      }
-   
-   
-    print '<div class="col-xs-8 col-sm-9">'; 
-    print "<h2><a href='$node_url' title='$title'>$title $qualifications</a></h2>";
-    if ($position)
-      print "<p class='profile-position'>$position</p>"; 
-    if ($content) 
-      print "<div id='profile-body'>$content</div>";
-    print "<p><a href='$node_url' title='View profile, $title' class='btn btn-primary btn-sm'>View profile</a></p>";
-    print '</div>'; // close .profile-info
-    print '</div>';
-  }
-  elseif ($layout_staff_directory_layout == 'grid') {
+
     print "<div class='col-sm-6 col-md-4 profile clearfix'>";
     print "<div class='row'>";
-    if ($image_field) {
-        print '<div class="col-xs-4 col-sm-12"><a href="' . $node_url . '"><img src="/' . $image_field . '" title="' . $title . '" class="img-thumbnail" alt="' . $staff_alt_text .'"></a></div>';
-      }
+    if ($image_field) { ?>
+        <div class="col-xs-4 col-sm-12"
+          <a href="' . $node_url . '">
+            <?php print $image_field; ?>
+          </a>
+        </div>';
+    <?php  } ?>
    
-   
+ <?php
     print '<div class="col-xs-8 col-sm-12">'; 
     print "<h2><a href='$node_url' title='$title'>$title $qualifications</a></h2>";
     if ($position)
-      print "<p class='profile-position'>$position</p>"; 
-    if ($content) 
-      print "<div id='profile-body'><small>$content</small></div>";
+      print "<p class='profile-position'>$position</p>";
     print "<p><a href='$node_url' title='View profile, $title' class='btn btn-primary btn-sm'>View profile</a></p>";
     print '</div>';
     print '</div>';
     print '</div>';
-  }
-
-
 
 }
+

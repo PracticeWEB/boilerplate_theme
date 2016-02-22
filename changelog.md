@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this theme will be documented in this file.
 
+## [1.2.1] - 2016-02-22
+### Removed
+* Removed redundant logic in node-pw_staff_profile.tpl.php: Removed if/else statement which was referring to grid/list style in theme-settings.
 
 ## [1.2] - 2016-02-19
 ### Added

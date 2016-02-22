@@ -1,6 +1,6 @@
 name = boilerplate_theme
 description = Starter theme designed for giving the developer more flexibility
-version = 1.2
+version = 1.2.1
 core = 6.x
 engine = phptemplate
 stylesheets[all][] = css/bootstrap.css
