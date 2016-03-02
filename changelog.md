@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this theme will be documented in this file.
 
+## [1.2.2] - 2016-03-02
+### Added
+* Added block.tpl.php. Template also can now use Block Class module for printing custom css classes from admin area.
+
 ## [1.2.1] - 2016-02-22
 ### Removed
 * Removed redundant logic in node-pw_staff_profile.tpl.php: Removed if/else statement which was referring to grid/list style in theme-settings.
