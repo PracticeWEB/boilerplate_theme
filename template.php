@@ -45,6 +45,7 @@ function boilerplate_theme_preprocess_page(&$vars, $hook) {
   $vars['company_postcode'] = variable_get('company_postcode', '');
   $vars['company_country'] = variable_get('company_country', '');
   $vars['company_phone'] = variable_get('company_phone', '');
+  $vars['company_phone_sanitised'] =  str_replace(' ', '', variable_get('company_phone', '')); // Use in 'tel' attribute for displaying number on mobile screens
   $vars['company_alt_number'] = variable_get('company_phone2', '');
   $vars['company_fax'] = variable_get('company_fax', '');
   $vars['company_mobile'] = variable_get('company_mobile', '');
