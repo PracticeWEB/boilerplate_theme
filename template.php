@@ -52,3 +52,39 @@ function boilerplate_theme_preprocess_page(&$vars, $hook) {
   $vars['company_pager'] = variable_get('company_pager', '');
   
 }
+
+/**
+ * Returns a form in a grid layout 
+ *
+ * @param array $element
+ * Contains the grid options
+ *
+ * @ingroup themeable
+ */
+
+function boilerplate_theme_webform_grid($element) {
+  $rows = array();
+  $header = array(array('data' => '', 'class' => 'webform-grid-question'));
+  // Set the header for the table.
+  foreach ($element['#grid_options'] as $option) {
+    $header[] = array('data' => _webform_filter_xss($option), 'class' => 'webform-grid-option');
+  }
+
+  foreach (element_children($element) as $key) {
+    $question_element = $element[$key];
+
+    // Create a row with the question title.
+    $row = array(array('data' => _webform_filter_xss($question_element['#title']), 'class' => 'webform-grid-question'));
+
+    // Render each radio button in the row.
+    $radios = expand_radios($question_element);
+    foreach (element_children($radios) as $key) {
+      unset($radios[$key]['#title']);
+      $row[] = array('data' => drupal_render($radios[$key]), 'class' => 'webform-grid-option');
+    }
+    $rows[] = $row;
+  }
+
+  $option_count = count($header) - 1;
+  return theme('form_element', $element, theme('table', $header, $rows, array('class' => 'webform-grid webform-grid-' . $option_count)));
+}
